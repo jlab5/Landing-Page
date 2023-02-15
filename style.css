@@ -1,0 +1,68 @@
+@font-face {
+    font-family: itzyFont;
+    src: url(./resources/SpoqaHanSansNeo-Regular.ttf) format('truetype');
+    font-weight: normal;
+  }
+
+@font-face {
+    font-family: itzyFont;
+    src: url(./resources/SpoqaHanSansNeo-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: itzyFont, Arial, Helvetica, sans-serif;
+}
+
+/*div {
+    border: 1px solid black
+}*/
+
+.header {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 30px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+
+li {
+    margin: 8px;
+}
+
+.main-headline {
+    background-color: #1F2937;
+    color: white;
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-headline p {
+    font-size: 10px;
+}
+
+button {
+    color: white;
+    background-color: rgb(78, 128, 238);
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+}
+
+.group-pic {
+    height: 250px;
+    width: 400px;
+}
