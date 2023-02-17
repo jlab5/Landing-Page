@@ -82,7 +82,12 @@ button {
     font-size: large;
     font-weight: bold;
     margin-top: 10px;
+    transition: all 0.2s ease; /*all CSS properties of buttons will transition through gradual ease in and out motion for 0.2s*/
 }
+
+button:active {
+    transform: translateY(2px); /*button movement for when pressed*/
+  }
 
 #group-pic {
     height: 375px;
@@ -98,13 +103,19 @@ button {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    gap:10px;
+    gap: 10px;
 }
 
 .middle-header {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.members {
+    padding-right: 8px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .photocards{
@@ -117,12 +128,57 @@ button {
 }
 
 .photocards img {
-    width: 200px;
-    height: 250px;
+    position: absolute;
+    display: flex;
     border-radius: 10px;
+    height: 100%;
+    width: 100%;
     border: 5px solid white;
 }
 
+.container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 105%; /* border made photo image bigger*/
+    height: 105%; 
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.overlay > * { /*targetting every direct child of overlay i.e. member description*/
+    transform: translateY(20px); /*move down contents 20px from original position*/
+    transition: transform 0.25s; /*same time as overlay transition*/
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay:hover * { /*allows for contents to move up from the bottom through this transition when mouse is hovered over*/
+    transform: translateY(0)
+}
+
+.blur {
+    backdrop-filter: blur(5px);
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+
+}
 .quote,
 .twice-promote {
     display: flex;
