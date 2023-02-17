@@ -232,7 +232,8 @@ button:active {
 .footer {
     background-color: rgb(29,29,61);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: auto;
     padding: 5px 50px;
